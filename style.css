@@ -7,7 +7,11 @@ html {
   padding: 0;
 }
 
-.submitCard {
+* {
+  box-sizing: border-box;
+}
+
+.submit-card {
   background-color: hsl(213, 19%, 18%);
   height: auto;
   width: auto;
@@ -17,10 +21,22 @@ html {
   margin-right: auto;
   margin-top: 2rem;
   margin-bottom: auto;
+  position: relative;
 }
 
-.cardWrapper {
+.card-wrapper {
   padding: 1.2rem;
+}
+
+.card-result {
+  border-radius: 1rem;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  display: var(--state);
+  background-color: hsl(213, 19%, 18%);
+  max-width: 330px;
 }
 
 .circleStyling {
@@ -50,18 +66,65 @@ p {
   padding-bottom: 1.3rem;
 }
 
-.btnStyling {
-  background-color: hsl(213, 19%, 28%);
-  color: hsl(216, 12%, 54%);
-  border-radius: 20px;
-  height: 3rem;
-  width: 3rem;
+.rating-input {
+  display: none;
 }
 
-.btnSubmit {
+.rating-label {
+  border: 1px solid hsl(216, 12%, 54%);
+  border-radius: 50%;
+  width: 2.5rem;
+  aspect-ratio: 1;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.rating-label:hover {
+  background-color: hsl(217, 12%, 63%);
+}
+
+#btn-submit {
   background-color: hsl(25, 97%, 53%);
   color: white;
   width: 100%;
   height: 3rem;
   border-radius: 30px;
+  cursor: pointer;
+}
+
+#btn-submit:hover {
+  background-color: white;
+  color: hsl(25, 97%, 53%);
+}
+
+.rating-input:checked + .rating-label {
+  background-color: hsl(25, 97%, 53%);
+}
+
+.thanks-image-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+#selected-rating {
+  text-align: center;
+  padding: 0.5rem;
+  margin-top: 3rem;
+  width: 66%;
+  color: hsl(25, 97%, 53%);
+  background-color: hsl(213, 10%, 23%);
+  border-radius: 1rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.thank-you-article {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }

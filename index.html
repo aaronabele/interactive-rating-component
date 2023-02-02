@@ -16,8 +16,8 @@
     <title>Frontend Mentor | Interactive rating component</title>
   </head>
   <body>
-    <div class="submitCard">
-      <div class="cardWrapper">
+    <div class="submit-card">
+      <div class="card-wrapper">
         <img
           class="circleStyling"
           src="./images/icon-star.svg"
@@ -31,17 +31,64 @@
           </p>
         </article>
         <div class="btnWrapper">
-          <button class="btnStyling">1</button>
-          <button class="btnStyling">2</button>
-          <button class="btnStyling">3</button>
-          <button class="btnStyling">4</button>
-          <button class="btnStyling">5</button>
+          <input
+            class="rating-input"
+            type="radio"
+            name="rating"
+            value="1"
+            id="rating1"
+          />
+          <label class="rating-label" for="rating1">1</label>
+          <input
+            class="rating-input"
+            type="radio"
+            name="rating"
+            value="2"
+            id="rating2"
+          />
+          <label class="rating-label" for="rating2">2</label>
+          <input
+            class="rating-input"
+            type="radio"
+            name="rating"
+            value="3"
+            id="rating3"
+          />
+          <label class="rating-label" for="rating3">3</label>
+          <input
+            class="rating-input"
+            type="radio"
+            name="rating"
+            value="4"
+            id="rating4"
+          />
+          <label class="rating-label" for="rating4">4</label>
+          <input
+            class="rating-input"
+            type="radio"
+            name="rating"
+            value="5"
+            id="rating5"
+          />
+          <label class="rating-label" for="rating5">5</label>
         </div>
         <div class="subBtnWrapper">
-          <button class="btnSubmit">SUBMIT</button>
+          <button id="btn-submit">SUBMIT</button>
         </div>
-        <script src="script.js"></script>
+      </div>
+      <div class="card-result">
+        <div class="thanks-image-wrapper">
+          <img src="/images/illustration-thank-you.svg" alt="Thank you image" />
+        </div>
+        <div id="selected-rating">
+          <span>You selected <span id="input-rating">X</span> out of 5</span>
+        </div>
+        <article class="thank-you-article">
+          <h2>Thank you!</h2>
+          <p>We appreciate you taking the time...</p>
+        </article>
       </div>
     </div>
+    <script src="script.js"></script>
   </body>
 </html>
